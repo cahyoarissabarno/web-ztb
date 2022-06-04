@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import Image from "next/image";
 
 export default function Carousel(props) {
     const settings = {
@@ -11,17 +12,17 @@ export default function Carousel(props) {
     return (
       <div className="conatiner p-10">
         <Slider {...settings}>
-          <div>
-            <img className="w-full h-52 object-cover" src='https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' />
+          <div className="w-full h-52 object-cover relative">
+            <Image layout='fill' objectFit='cover' src='https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' />
           </div>
-          <div>
-            <img className="w-full h-52 object-cover" src='https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' />
+          <div className="w-full h-52 object-cover relative">
+            <Image layout='fill' objectFit='cover' src='https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' />
           </div>
-          <div>
-            <img className="w-full h-52 object-cover" src='https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' />
+          <div className="w-full h-52 object-cover relative">
+            <Image layout='fill' objectFit='cover' src='https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' />
           </div>
-          <div>
-            <img className="w-full h-52 object-cover" src='https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' />
+          <div className="w-full h-52 object-cover relative">
+            <Image layout='fill' objectFit='cover' src='https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' />
           </div>
         </Slider>
       </div>

@@ -43,7 +43,9 @@ export default function HomeShop() {
   return (
     <>
       <NavbarEcommerce menu={menu}/>
-      <Carousel/>
+      <div className='pt-14'>
+        <Carousel/>
+      </div>
       <div className='my-5'>
         <div className='bg-gray-800 p-3'>
           <div className="container mx-auto my-5 bg-white py-3 px-5 rounded-xl">

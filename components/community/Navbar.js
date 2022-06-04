@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Navbar(props) {
   const [toggleNav, setToggleNav] = useState(false)
   return (
-    <div className="fixed container max-w-none">
+    <div className="fixed container max-w-none z-20">
       <nav className="shadow bg-gray-800">
           <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
               <div className="flex items-center justify-between">
@@ -25,7 +25,7 @@ export default function Navbar(props) {
                 <div className="flex flex-col md:flex-row md:mx-6">
                     {props.menu.map((val, i)=>{
                         return(
-                            <Link href={`${val.link}`}>
+                            <Link key={i} href={`${val.link}`}>
                                 <a key={i} className="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0">{val.title}</a>
                             </Link>
                         )

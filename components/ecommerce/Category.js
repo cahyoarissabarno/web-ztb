@@ -1,12 +1,14 @@
+import Image from "next/image"; 
 
 export default function CategoryList(props) {
   return (
     <div className="flex flex-wrap">
         {props.categories.map((val, i)=>{
             return (
-                <div className="max-w-xs mx-auto overflow-hidden bg-white">
-                    <img className="object-cover w-full p-5 h-28" src={`${val.image}`} />
-                    
+                <div key={i} className="max-w-xs mx-auto overflow-hidden bg-white">
+                    <div className="object-cover m-5 h-28 relative">
+                        <Image layout='fill' objectFit='contain' src={`${val.image}`} />
+                    </div>
                     <div className="pb-5 px-5 text-center">
                         <a href="#" className="block text-gray-900 md:text-base text-sm font-medium">{val.title}</a>
                     </div>
