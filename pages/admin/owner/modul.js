@@ -56,7 +56,9 @@ export default function OwnerModul() {
                                                     <div className="flex items-center">
                                                         <div className="flex-shrink-0">
                                                             <a href="#" className="block relative">
-                                                                <img alt="profil" src="https://images.unsplash.com/photo-1573633509389-0e3075dea01b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872" className="mx-auto object-cover h-20 w-20 "/>
+                                                                <div className="mx-auto object-cover h-20 w-20 relative">
+                                                                    <Image layout='fill' objectFit='cover' className='' src="https://images.unsplash.com/photo-1573633509389-0e3075dea01b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872"/>
+                                                                </div>
                                                             </a>
                                                         </div>
                                                         <div className="ml-3">

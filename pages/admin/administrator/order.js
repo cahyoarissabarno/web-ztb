@@ -155,15 +155,15 @@ export default function Order() {
                                 <div className="grid sm:grid-cols-2 grid-cols-1 gap-6 mt-4">
                                     <div>
                                         <div className='my-3'>
-                                            <label className="text-gray-700" for="username">Nama Produk</label>
+                                            <label className="text-gray-700" >Nama Produk</label>
                                             <input id="username" type="text" className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" />
                                         </div>
                                         <div className='my-3'>
-                                            <label className="text-gray-700" for="password">Harga</label>
+                                            <label className="text-gray-700" >Harga</label>
                                             <input id="password" type="password" className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" />
                                         </div>
                                         <div className='my-3'>
-                                            <label className="text-gray-700" for="passwordConfirmation">Kategori Produk</label>
+                                            <label className="text-gray-700" >Kategori Produk</label>
                                             
                                             <select  className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
                                                 <option value="volvo">Volvo</option>
@@ -173,12 +173,12 @@ export default function Order() {
                                             </select>
                                         </div>
                                         <div className='my-3'>
-                                            <label className="text-gray-700" for="passwordConfirmation">Gambar Produk</label>
+                                            <label className="text-gray-700" >Gambar Produk</label>
                                             <input id="passwordConfirmation" type="file" className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" />
                                         </div>
                                     </div>
                                     <div className='my-3'>
-                                        <label className="text-gray-700" for="emailAddress">Deskripsi Produk</label>
+                                        <label className="text-gray-700" >Deskripsi Produk</label>
                                         <textarea className="w-full h-3/4 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" rows="5" cols="40" />
                                     </div>
                                 </div>

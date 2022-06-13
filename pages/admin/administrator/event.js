@@ -66,7 +66,9 @@ export default function Event() {
                                                     <div className="flex items-center">
                                                         <div className="flex-shrink-0">
                                                             <a href="#" className="block relative">
-                                                                <img alt="profil" src="https://images.unsplash.com/photo-1573633509389-0e3075dea01b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872" className="mx-auto object-cover h-20 w-20 "/>
+                                                                <div className="mx-auto object-cover h-20 w-20 relative">
+                                                                    <Image layout='fill' objectFit='cover' className='' src="https://images.unsplash.com/photo-1573633509389-0e3075dea01b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872"/>
+                                                                </div>
                                                             </a>
                                                         </div>
                                                         <div className="ml-3">
@@ -143,11 +145,11 @@ export default function Event() {
                                 <div className="grid sm:grid-cols-2 grid-cols-1 gap-6 mt-4">
                                     <div>
                                         <div className='my-3'>
-                                            <label className="text-gray-700" for="username">Nama Event</label>
+                                            <label className="text-gray-700" >Nama Event</label>
                                             <input id="username" type="text" className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" />
                                         </div>
                                         <div className='my-3'>
-                                            <label className="text-gray-700" for="passwordConfirmation">Kategori Event</label>
+                                            <label className="text-gray-700" >Kategori Event</label>
                                             
                                             <select  className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
                                                 <option value="volvo">Umum</option>
@@ -156,20 +158,20 @@ export default function Event() {
                                             </select>
                                         </div>
                                         <div className='my-3'>
-                                            <label className="text-gray-700" for="passwordConfirmation">Gambar Event</label>
+                                            <label className="text-gray-700" >Gambar Event</label>
                                             <input id="passwordConfirmation" type="file" className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" />
                                         </div>
                                         <div className='my-3'>
-                                            <label className="text-gray-700" for="password">Tanggal Event</label>
+                                            <label className="text-gray-700" >Tanggal Event</label>
                                             <input id="password" type="password" className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" />
                                         </div>
                                         <div className='my-3'>
-                                            <label className="text-gray-700" for="password">Lokasi Event</label>
+                                            <label className="text-gray-700" >Lokasi Event</label>
                                             <input id="password" type="password" className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" />
                                         </div>
                                     </div>
                                     <div className='my-3'>
-                                        <label className="text-gray-700" for="emailAddress">Deskripsi Event</label>
+                                        <label className="text-gray-700" >Deskripsi Event</label>
                                         <textarea className="w-full h-3/4 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" rows="5" cols="40" />
                                     </div>
                                 </div>
