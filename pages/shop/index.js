@@ -54,7 +54,7 @@ export default function HomeShop() {
           </div>
         </div>
         <div className="container mx-auto my-5">
-          <h4 className="text-2xl font-bold">Semua Produk</h4>
+          <h4 className="text-2xl font-bold mx-5">Semua Produk</h4>
           <ProductList product={product}/>
         </div>
       </div>

@@ -8,8 +8,8 @@ export default function ProductList(props) {
             return (
                 <Link key={i} href={val.link}>
                     <div className="max-w-xs mx-auto overflow-hidden bg-white outline outline-1 outline-gray-200">
-                        <div className='object-cover m-5 h-56 relative'>
-                            <Image layout='fill' objectFit='cover' src={`${val.image}`} />
+                        <div className='object-cover m-5 h-36 relative'>
+                            <Image layout='fill' objectFit='cover' src={`${val.image}`} className='h-1/2'/>
                         </div>
                         <div className="pb-5 px-5">
                             <a href="#" className="block text-gray-900 md:text-base text-sm font-medium">{val.title}</a>
