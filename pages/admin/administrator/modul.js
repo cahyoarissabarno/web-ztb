@@ -47,16 +47,16 @@ export default function Modul() {
                                     <table className="min-w-full leading-normal">
                                         <thead>
                                             <tr>
-                                                <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
+                                                <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-blueLogo  text-left text-sm uppercase font-normal">
                                                     Judul Modul
                                                 </th>
-                                                <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
+                                                <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-blueLogo  text-left text-sm uppercase font-normal">
                                                     Kategori
                                                 </th>
-                                                <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
+                                                <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-blueLogo  text-left text-sm uppercase font-normal">
                                                     Created at
                                                 </th>
-                                                <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
+                                                <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-blueLogo  text-left text-sm uppercase font-normal">
                                                 </th>
                                             </tr>
                                         </thead>
@@ -137,7 +137,7 @@ export default function Modul() {
                 </div>
                 <div className={`${toggleModal ? 'flex' : 'hidden'} absolute z-10 w-full`}>
                     {/* <ProductModal toggle={setToggleModal} tg={toggleModal}></ProductModal> */}
-                    <div className='grid content-center h-screen bg-gray-800/50 z-10 w-full'>
+                    <div className='grid content-center h-screen bg-blueLogo/50 z-10 w-full'>
                         <div className="sm:w-3/4 w-full mx-auto p-6 bg-white rounded-md shadow-md overflow-auto my-6 sm:my-0">
                             <h2 className="text-2xl font-semibold text-gray-700 capitalize">TAMBAH MODUL</h2>
                             
