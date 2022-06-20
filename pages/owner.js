@@ -2,8 +2,10 @@ import Navbar from '../components/community/Navbar'
 import { MdAccountBalanceWallet } from "react-icons/md";
 import Link from 'next/link'
 import Image from 'next/image'
+import { useEffect, useState } from 'react';
 
 export default function OwnerHome() {
+  const [navbarBg, setNavbarBg] = useState(false);
   const menu = [
     {title: 'Home', link: '/'},
     {title: 'Shop', link: '/shop'},
@@ -13,10 +15,22 @@ export default function OwnerHome() {
     {title: 'About', link: '#'},
   ]
 
+  const onNavScroll = () =>{
+    if (window.scrollY >= 90) {
+      setNavbarBg(true)
+    } else {
+      setNavbarBg(false)
+    }
+  }
+
+  useEffect(()=>{
+    window.addEventListener('scroll', onNavScroll);
+  },[])
+
   return (
     <>
-      <Navbar menu={menu} />
-      <div className="container max-w-none px-14 flex flex-col py-4 mx-auto space-y-6 lg:h-[42rem] py-16 md:flex-row md:items-center bg-gray-800">
+      <Navbar menu={menu} bg={navbarBg} />
+      <div className="container max-w-none px-14 flex flex-col py-4 mx-auto space-y-6 lg:h-[42rem] py-16 md:flex-row md:items-center bg-blueLogo">
         <div className="flex items-center mt-10 justify-center w-full h-full lg:w-1/2">
             <div className='object-cover object-right w-full h-full max-w-2xl'>
               <Image layout='intrinsic' width={550} height={550} objectFit='cover' className="rounded-md" 
@@ -106,11 +120,11 @@ export default function OwnerHome() {
       <div className='container my-14 mx-auto'>
         <p className='text-gray-700 md:text-4xl md:mx-14 px-14 text-3xl px-5 font-bold text-center my-6 py-6'>
           Keunggulan Produk Dari
-          <span className='block text-gray-800 uppercase underline font-extrabold'>MetaFranchise</span>
+          <span className='block text-blueLogo uppercase underline font-extrabold'>MetaFranchise</span>
         </p>
         <div className='flex flex-wrap justify-center my-10 pb-10'>
           <div className="max-w-xs mx-auto overflow-hidden bg-gray-100 rounded-3xl shadow-xl mx-4 my-3 w-64">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-full p-5 h-56 fill-gray-800" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-full p-5 h-56 fill-blueLogo" viewBox="0 0 20 20" fill="currentColor">
               <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
             </svg>
@@ -120,7 +134,7 @@ export default function OwnerHome() {
             </div>
           </div>
           <div className="max-w-xs mx-auto overflow-hidden bg-gray-100 rounded-3xl shadow-xl mx-4 my-3 w-64">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-full p-5 h-56 fill-gray-800" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-full p-5 h-56 fill-blueLogo" viewBox="0 0 20 20" fill="currentColor">
               <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
             </svg>
@@ -130,7 +144,7 @@ export default function OwnerHome() {
             </div>
           </div>
           <div className="max-w-xs mx-auto overflow-hidden bg-gray-100 rounded-3xl shadow-xl mx-4 my-3 w-64">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-full p-5 h-56 fill-gray-800" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-full p-5 h-56 fill-blueLogo" viewBox="0 0 20 20" fill="currentColor">
               <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
             </svg>
@@ -140,7 +154,7 @@ export default function OwnerHome() {
             </div>
           </div>
           <div className="max-w-xs mx-auto overflow-hidden bg-gray-100 rounded-3xl shadow-xl mx-4 my-3 w-64">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-full p-5 h-56 fill-gray-800" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-full p-5 h-56 fill-blueLogo" viewBox="0 0 20 20" fill="currentColor">
               <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
             </svg>
@@ -164,7 +178,7 @@ export default function OwnerHome() {
           <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
             <div className="p-2 sm:w-1/2 w-full">
               <div className="bg-gray-100 rounded flex p-4 h-full items-center shadow-xl">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-blueLogo w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
@@ -173,7 +187,7 @@ export default function OwnerHome() {
             </div>
             <div className="p-2 sm:w-1/2 w-full">
               <div className="bg-gray-100 rounded flex p-4 h-full items-center shadow-xl">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-blueLogo w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
@@ -182,7 +196,7 @@ export default function OwnerHome() {
             </div>
             <div className="p-2 sm:w-1/2 w-full">
               <div className="bg-gray-100 rounded flex p-4 h-full items-center shadow-xl">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-blueLogo w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
@@ -191,7 +205,7 @@ export default function OwnerHome() {
             </div>
             <div className="p-2 sm:w-1/2 w-full">
               <div className="bg-gray-100 rounded flex p-4 h-full items-center shadow-xl">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-blueLogo w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
@@ -200,7 +214,7 @@ export default function OwnerHome() {
             </div>
             <div className="p-2 sm:w-1/2 w-full">
               <div className="bg-gray-100 rounded flex p-4 h-full items-center shadow-xl">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-blueLogo w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
@@ -209,7 +223,7 @@ export default function OwnerHome() {
             </div>
             <div className="p-2 sm:w-1/2 w-full">
               <div className="bg-gray-100 rounded flex p-4 h-full items-center shadow-xl">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-blueLogo w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
@@ -217,7 +231,7 @@ export default function OwnerHome() {
               </div>
             </div>
           </div>
-          <section className="bg-white dark:bg-gray-800 mt-32 rounded-3xl">
+          <section className="bg-white dark:bg-blueLogo mt-32 rounded-3xl">
             <div className="container flex flex-col items-center px-4 py-12 mx-auto text-center">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">
                 Let&apos;s work together
@@ -237,13 +251,13 @@ export default function OwnerHome() {
         </div>
       </section>
 
-      <footer className="bg-white dark:bg-gray-800 pt-10">
+      <footer className="bg-white dark:bg-blueLogo pt-10">
           <div className="container px-6 py-4 mx-auto">
               <div className="lg:flex">
                   <div className="w-full -mx-6 lg:w-2/5">
                       <div className="px-6">
                           <div>
-                              <a href="#" className="text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">Brand</a>
+                              <a href="#" className="text-xl font-bold text-blueLogo dark:text-white hover:text-gray-700 dark:hover:text-gray-300">Brand</a>
                           </div>
                           
                           <p className="max-w-md mt-2 text-gray-500 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
@@ -305,7 +319,7 @@ export default function OwnerHome() {
               <hr className="h-px my-6 bg-gray-300 border-none dark:bg-gray-700"/>
 
               <div>
-                  <p className="text-center text-gray-800 dark:text-white">© Brand 2020 - All rights reserved</p>
+                  <p className="text-center text-blueLogo dark:text-white">© Brand 2020 - All rights reserved</p>
               </div>
           </div>
       </footer>

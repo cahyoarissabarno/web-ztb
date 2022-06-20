@@ -6,7 +6,7 @@ export default function ProductModal(props) {
     const [toggleNav, setToggleNav] = useState(false)
       
     return (
-        <div className='grid content-center h-screen bg-gray-800/50 z-10 w-full'>
+        <div className='grid content-center h-screen bg-blueLogo/50 z-10 w-full'>
             <div className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md">
                 <h2 className="text-lg font-semibold text-gray-700 capitalize">Account settings</h2>
                 
