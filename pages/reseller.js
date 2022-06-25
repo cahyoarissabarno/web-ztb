@@ -108,7 +108,7 @@ export default function ReselleHome() {
       {/* Section2 */}
       <div className='container max-w-none bg-gray-100 px-10 py-14 mx-auto grid md:grid-cols-2 grid-cols-1'>
         <div className='text-center py-10'>
-          <p className='font-bold text-5xl md:mx-6 mb-10 tracking-tighter'>Tahukah Anda ?</p>
+          <p className='font-bold md:text-5xl text-4xl md:mx-6 mb-10 tracking-tighter'>Tahukah Anda ?</p>
           <div className='object-cover mx-auto object-right w-full max-w-2xl'>
             <Image layout='intrinsic' width={450} height={350} objectFit='cover' className="rounded-md" 
             src="/box.png"/>
@@ -167,7 +167,7 @@ export default function ReselleHome() {
         <p className='font-bold text-2xl md:w-2/3 w-full px-16 text-center mx-auto'>Tenang, Dengan pengalaman Belasan Tahun membangun Ribuan Reseller,</p>
         <p className='font-bold text-2xl md:w-2/3 w-full px-16 text-center mx-auto my-8'>kami akan mensupport Anda untuk praktek dan hasilkan income hanya dari Rumah, dengan modal INTERNET & Social Media yang bisa dikerjakan dimanapun dan kapanpun!</p>
         <div className='mx-auto text-center my-24'>
-          <p className='text-4xl font-bold text-blueLogo'>Kami Punya Solusinya</p>
+          <p className='text-4xl font-bold text-blueLogo px-6'>Kami Punya Solusinya</p>
           <button className="px-6 py-3 my-6 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
             Bergabung Sekarang
           </button>
@@ -196,7 +196,7 @@ export default function ReselleHome() {
       {/* Section6 */}
       <section className="text-gray-600 body-font bg-gradient-to-b from-white to-gray-200">
         <div className="container px-5 py-24 mx-auto">
-          <section className="bg-white dark:bg-blueLogo mt-14 rounded-3xl">
+          <section className="bg-white bg-blueLogo mt-14 rounded-3xl">
             <div className="container flex flex-col items-center px-4 py-12 mx-auto text-center">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">
                 Let&apos;s work together
