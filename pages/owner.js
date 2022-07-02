@@ -8,9 +8,13 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react';
 import Footer from '../components/community/Footer';
 import Slider from 'react-slick';
+import RegisterReseller from '../components/modal/RegisterReseller';
+import RegisterOwner from '../components/modal/RegisterOwner';
 
 export default function OwnerHome() {
   const [navbarBg, setNavbarBg] = useState(false);
+  const [toggleModalOwner, setToggleModalOwner] = useState(false);
+
   const menu = [
     {title: 'Home', link: '/'},
     {title: 'Shop', link: '/shop'},
@@ -259,7 +263,7 @@ export default function OwnerHome() {
             </div>
           </Slider>
         </div>
-        <button className="p-3 w-1/5 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+        <button onClick={()=>setToggleModalOwner(true)} className="p-3 w-1/5 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
           Bergabung Sekarang
         </button>
       </div>
@@ -289,7 +293,10 @@ export default function OwnerHome() {
         </div>
       </div>
       <Footer/>
-
+      {/* Modal */}
+      <div className={`${toggleModalOwner ? 'flex' : 'hidden'} fixed inset-0 h-full w-full`}>
+        <RegisterOwner toggle={setToggleModalOwner} />
+      </div>
     </>
   )
 }
