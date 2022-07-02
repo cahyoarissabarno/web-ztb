@@ -2,6 +2,7 @@ import Navbar from '../../components/community/Navbar'
 import { MdAccountBalanceWallet } from "react-icons/md";
 import Link from 'next/link'
 import Image from 'next/image'
+import NavbarEcommerce from '../../components/ecommerce/Navbar';
 
 export default function ProductDetail() {
   const menu = [
@@ -15,7 +16,7 @@ export default function ProductDetail() {
 
   return (
     <>
-      <Navbar menu={menu} />
+      <NavbarEcommerce menu={menu} />
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
             <div className="lg:w-4/5 mx-auto flex flex-wrap">

@@ -9,9 +9,12 @@ import { FaShieldAlt, FaWarehouse, FaBoxes, FaPeopleCarry, FaUsersCog, FaClipboa
 import { BsPatchCheckFill, BsCheckCircleFill, BsCashCoin, BsFacebook } from "react-icons/bs";
 import { GiMedicinePills, GiNotebook, GiShop, GiBuyCard } from "react-icons/gi";
 import { MdMoneyOff, MdContentCopy } from "react-icons/md";
+import RegisterReseller from '../components/modal/RegisterReseller';
+import RegisterOwner from '../components/modal/RegisterOwner';
 
 export default function ReselleHome() {
   const [navbarBg, setNavbarBg] = useState(false);
+  const [toggleModalReseller, setToggleModalReseller] = useState(false);
   const menu = [
     {title: 'Home', link: '/'},
     {title: 'Shop', link: '/shop'},
@@ -168,7 +171,7 @@ export default function ReselleHome() {
         <p className='font-bold text-2xl md:w-2/3 w-full px-16 text-center mx-auto my-8'>kami akan mensupport Anda untuk praktek dan hasilkan income hanya dari Rumah, dengan modal INTERNET & Social Media yang bisa dikerjakan dimanapun dan kapanpun!</p>
         <div className='mx-auto text-center my-24'>
           <p className='text-4xl font-bold text-blueLogo px-6'>Kami Punya Solusinya</p>
-          <button className="px-6 py-3 my-6 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+          <button onClick={()=>setToggleModalReseller(true)} className="px-6 py-3 my-6 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
             Bergabung Sekarang
           </button>
         </div>
@@ -206,7 +209,7 @@ export default function ReselleHome() {
               </p>
               <div className="mt-6 sm:-mx-2">
                 <div className="inline-flex w-full sm:w-auto sm:mx-2">
-                  <a href="#" className="inline-flex items-center justify-center w-full px-5 py-2 text-white bg-gray-600 rounded-lg hover:bg-gray-500">
+                  <a onClick={()=>setToggleModalReseller(true)} className="inline-flex items-center justify-center w-full px-5 py-2 text-white bg-gray-600 rounded-lg hover:bg-gray-500">
                     Bergabung Sekarang
                   </a>
                 </div>
@@ -259,7 +262,7 @@ export default function ReselleHome() {
             )
           }) }
         </div>
-        <button className="p-3 lg:w-1/5 md:w-1/4 w-1/2 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+        <button onClick={()=>setToggleModalReseller(true)} className="p-3 lg:w-1/5 md:w-1/4 w-1/2 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
           Bergabung Sekarang
         </button>
       </div>
@@ -305,7 +308,7 @@ export default function ReselleHome() {
             )
           }) }
         </div>
-        <button className="p-3 lg:w-1/5 md:w-1/4 w-1/2 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+        <button onClick={()=>setToggleModalReseller(true)} className="p-3 lg:w-1/5 md:w-1/4 w-1/2 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
           Bergabung Sekarang
         </button>
       </div>
@@ -329,7 +332,7 @@ export default function ReselleHome() {
               <p className='text-lg font-normal'><BsCheckCircleFill className='inline w-6 h-6 fill-blueLogo'/> Course Tiktok Marketing</p>
               <p className='text-lg font-normal'><BsCheckCircleFill className='inline w-6 h-6 fill-blueLogo'/> Course Copywriting</p>
             </div>
-            <button className="p-3 w-58 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+            <button onClick={()=>setToggleModalReseller(true)} className="p-3 w-58 rounded-lg font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
               Bergabung Sekarang
             </button>
           </div>
@@ -340,13 +343,18 @@ export default function ReselleHome() {
       <div className='container mx-auto max-w-none p-10 mb-20 grid bg-gray-100 w-3/4 md:grid-cols-2 grid-cols-1 items-center justify-items-center shadow-xl'>
         <div className='lg:text-6xl text-4xl font-bold md:p-7'>See you at Member Area!</div>
         <div className='md:p-7 my-6'>
-          <button className="lg:px-5 px-3 py-3 md:w-58 w-full rounded-md font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+          <button onClick={()=>setToggleModalReseller(true)} className="lg:px-5 px-3 py-3 md:w-58 w-full rounded-md font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 hover:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
             Bergabung Sekarang
           </button>
         </div>
       </div>
       
       <Footer/>
+
+      {/* Modal */}
+      <div className={`${toggleModalReseller ? 'flex' : 'hidden'} fixed inset-0 h-full w-full`}>
+        <RegisterReseller toggle={setToggleModalReseller} />
+      </div>
     </>
   )
 }
