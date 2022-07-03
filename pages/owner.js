@@ -20,8 +20,8 @@ export default function OwnerHome() {
     {title: 'Shop', link: '/shop'},
     {title: 'Owner', link: '/owner'},
     {title: 'Reseller', link: '/reseller'},
-    {title: 'Event', link: '#'},
-    {title: 'About', link: '#'},
+    {title: 'Event', link: '/event'},
+    {title: 'About', link: '/about'},
   ]
 
   const section2 = [
