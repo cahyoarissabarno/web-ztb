@@ -10,8 +10,8 @@ export default function ProductDetail() {
     {title: 'Shop', link: '/shop'},
     {title: 'Owner', link: '/owner'},
     {title: 'Reseller', link: '/reseller'},
-    {title: 'Event', link: '#'},
-    {title: 'About', link: '#'},
+    {title: 'Event', link: '/event'},
+    {title: 'About', link: '/about'},
   ]
 
   return (
